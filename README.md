@@ -5,14 +5,14 @@
 * 10 classes of about 200 photes per class = 2k photos in total
 * each photo is of a one digit (from the 0-9 range) "spoken" in sign language
 * right hands of various individuals are used
-## The goal here:
+## The goal here
 * To present a simple pipeline for training and comparing various deep models.
 * By a single model we mean a fully defined, compilable, trainable algorithm whose performance is measurd in cross-validation
 * We search (a part of) the space of models in the so called grid-search with 5-fold cross-validation collecting a model's mean accuracy and the accuracies' standard devation.
 ## The results
 They were obtained in the notebook [] using Colab.
 
-In the notebook You'll find markdown text intertwined with (mostly short) blocks of pythonic code. Some sample images are also displayed. You'll also have to look into the notebook, if You're interested in exact values of all other hyperparameters (including e.g. definition of the data-augmentation).
+In the notebook You'll findr markdown text intertwined with (mostly short) blocks of pythonic code. Some sample images are also displayed there. You'll also have to look into the notebook, if You're interested in exact values of all other hyperparameters (including e.g. definition of the data-augmentation).
 ```
 model A =
 Conv2D(32,  (3,3)) | MaxPool(3,3) | BatchNorm |
