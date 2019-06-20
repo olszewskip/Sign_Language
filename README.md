@@ -4,7 +4,7 @@
 * made public with Apache License 2.0 in the repository https://github.com/ardamavi/Sign-Language-Digits-Dataset
 * 10 classes of about 200 photes per class = 2k photos in total
 * each photo is of a one digit (from the 0-9 range) "spoken" in sign language
-* right hands of various indyviduals are used
+* right hands of various individuals are used
 ## The goal here:
 * To present a simple pipeline for training and comparing various deep models.
 * By a single model we mean a fully defined, compilable, trainable algorithm whose performance is measurd in crossvalidation
