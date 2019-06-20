@@ -1,5 +1,5 @@
 # Image MNIST-like classification
----
+
 ## The dataset
 * made public with Apache License 2.0 in the repository https://github.com/ardamavi/Sign-Language-Digits-Dataset
 * 10 classes of about 200 photes per class = 2k photos in total
