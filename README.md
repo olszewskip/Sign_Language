@@ -9,10 +9,16 @@
 * To present a simple pipeline for training and comparing various deep models.
 * By a single model we mean a fully defined, compilable, trainable algorithm whose performance is measurd in cross-validation
 * We search (a part of) the space of models in the so called grid-search with 5-fold cross-validation collecting a model's mean accuracy and the accuracies' standard devation.
-## The results
-They were obtained in the notebook [] using Colab.
 
-In the notebook You'll findr markdown text intertwined with (mostly short) blocks of pythonic code. Some sample images are also displayed there. You'll also have to look into the notebook, if You're interested in exact values of all other hyperparameters (including e.g. definition of the data-augmentation).
+## Subjective summary of the result
+* It is easy to go above 96% accuracy, and hard to go above 98%
+* If you stay close to the defaults, you do not get a significant change in the accuracy.
+* Using data-augmentation was also not a significant modification.
+* Order-of-magnitute changes in learning rate and batch size can be observed to result in a deterioration of about few percentage points. But there is no universal rule in sight: the minimal grid that we have covered in the search did not reveal a clear gradient, and the effect is dependent on the architecture.
+* Maximum observed for the MobileNet was 98(+-2)%, and for the simpler model 97(+-1)%.
+
+
+## The models
 ```
 model A =
 Conv2D(32,  (3,3)) | MaxPool(3,3) | BatchNorm |
@@ -26,6 +32,16 @@ MovileNet_V2 |
 GlobalMaxPool |
 Dense(256) | Dropout(0.3) | Dense(256) | Dense(10)
 ```
+model | no layers | no parameters
+--- | --- | ---
+A | 15 | 457 k
+B | 160 | 2620 k
+
+## The results
+They were obtained in the notebook [https://github.com/olszewskip/Sign_Language/blob/master/sign_language_DL_with_CV.ipynb].
+
+In the notebook You'll find markdown text intertwined with (mostly short) blocks of pythonic code. Some sample images are also displayed there. You'll also have to look into the notebook, if You're interested in exact values of all other hyperparameters (including e.g. definition of the data-augmentation).
+
 model | batch size | adam's learning rate | augmentation | mean accuracy in CV | 2 * std(accuracy) in CV
 ---   | ---        | ---                  | ---          | ---                 | ---
 A |	32 |	0.0004 |	no |	0.9709 |	0.0081
