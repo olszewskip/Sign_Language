@@ -32,7 +32,7 @@ MovileNet_V2 |
 GlobalMaxPool |
 Dense(256) | Dropout(0.3) | Dense(256) | Dense(10)
 ```
-model | no layers | no parameters
+model | no. layers | no. parameters
 --- | --- | ---
 A | 15 | 457 k
 B | 160 | 2620 k
