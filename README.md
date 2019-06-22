@@ -10,7 +10,7 @@
 * By a single model we mean a fully defined, compilable, trainable algorithm whose performance is measurd in cross-validation
 * We search (a part of) the space of models in the so called grid-search with 5-fold cross-validation collecting a model's mean accuracy and the accuracies' standard devation.
 
-## Subjective summary of the result
+## Subjective summary of the results
 * It is easy to go above 96% accuracy, and hard to go above 98%
 * If you stay close to the defaults, you do not get a significant change in the accuracy.
 * Using data-augmentation was also not a significant modification.
